@@ -9,7 +9,7 @@ Whenever you use any of the **main** features within the script, a text will app
 
 # **Features**
 - Seeker Kill
-- Clicker / Ultra Kill
+- Clicker Kill
 - Auto Public Private
 - Secret...
 
@@ -18,7 +18,7 @@ The Standard Kill. Every 100ms it presses Q.
 Whilst all of these work best on low ping, Seeker Kill practically relies on Low Ping, as it struggles greatly on anything over 150ms
 Activated by pressing **Ctrl F8**.
 
-## **Clicker / Ultra Kill**
+## **Clicker**
 The Upgraded Kill. Every 50ms presses q, after 50ms presses the Kill Button.
 The supreme kill, as it presses both the hotkey and the actual kill button
 Moves Mouse to Kill Button
@@ -38,17 +38,25 @@ Activated by pressing **Shift T**
 
 ## **Bonus**
 ### =)
-Typing in '=))' will replace it with '=) It's kill or be killed after all)'
+Typing in '=)' will replace it with '=) It's kill or be killed after all'
+
+### Settings Menu
+Pressing 'Shift Escape' key will Take you to the Menu, just like in other games
+
+### Leave Game
+Pressing 'Ctrl + Q' will leave the game by clicking on the menu and pressing Leave Game.
 
 
 # **Shortcuts**
 | Shortcut | Skill |
 | --- | --- |
 | Ctrl F8 | Seeker Kill |
-| F8 | Clikcer Kill |
+| F8 | Clicker Kill |
 | Shift T | Tab List Remove |
 | F6 | Auto Public Prviate / Auto Click |
-| =))  =) It's kill or be killed after all) |
+| =) | =) It's kill or be killed after all |
+| Shift Esc | Menu |
+| Ctrl + Q | Leave Game |
 
 # To Do
 - [ ] Add Images / Evidence to GitHub

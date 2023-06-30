@@ -12,6 +12,7 @@ WinSet, TransColor, 99BBFF
 Gui, Add, Text,, Seeker Kill Active
 Gui SK:Hide
 
+; Seeker Kill
 ^F8::
 Toggle := !Toggle
 
@@ -29,15 +30,8 @@ While Toggle
 }
 return
 
-/*
-SetTimer, GrabLoc, 100
-return
 
-GrabLoc:
-MouseGetPos, startx, starty
-return
-*/
-
+;Clicker Kill
 F8::
 Clicker := !Clicker
 If Clicker
@@ -48,7 +42,7 @@ If Clicker
     Gui, Color, 99BBFF
     Gui +LastFound
     WinSet, TransColor, 99BBFF
-    Gui, Add, Text,, Ultra Kill Active
+    Gui, Add, Text,, Clicker Kill Active
     Gui, Show, X 1630 Y 40 NoActivate
 } else {
     Gui CK:Destroy
@@ -64,41 +58,11 @@ While Clicker
 }
 return
 
-/*
-+F8::
-Clicker2 := !Clicker2
-If Clicker2
-{
-    Gui CK2:New
-    Gui +AlwaysOnTop -Caption +Disabled
-    Gui, Font, cRed s16, Segoe UI Black
-    Gui, Color, 99BBFF
-    Gui +LastFound
-    WinSet, TransColor, 99BBFF
-    Gui, Add, Text,, Clicker Kill Active
-    Gui, Show, X 1630 Y 20  NoActivate
-    ;MouseGetPos, startx, starty
-} else {
-    Gui CK2:Destroy
-    MouseMove, startx, starty
-}
-
-While Clicker2
-{
-    Send, q
-    sleep 5
-    MouseClick, left, 1595, 943,1
-    sleep 5
-    MouseMove, startx, starty
-    sleep 40
-}
-return
-*/
-
 +T::
-MouseClick, left, 532, 392, 1
+MouseClick, left, 532, 392,,0
 return
 
+;Auto Public Private
 F6::
 AutoClick := !AutoClick
 If AutoClick
@@ -117,13 +81,28 @@ If AutoClick
 
 While AutoClick
 {
-    MouseClick, left, 689, 985, 1
+    MouseClick, left, 689, 985,,0
 }
 return
 
+;Bonus
 
-:=:=)::=) It's kill or be killed after all
+:*:=)::=) It's kill or be killed after all
 
+#IfWinActive ahk_exe Among Us.exe
+
++Esc::
+MouseClick, left, 1849, 61,,0
+return
+
+^Q::
+MouseClick, left, 1849, 61,,0
+Sleep, 100
+MouseClick, left, 957, 874,,0
+return
+
+
+#IfWinActive
 
 ; Admin Commands
 
@@ -141,3 +120,7 @@ Send, {ctrl down}s{ctrl up}
 sleep, 100
 reload
 return
+
+
+;1520, 142
+;1713, 48
