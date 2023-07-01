@@ -39,7 +39,8 @@ Activated by pressing **Shift T**
 ## **Bonus**
 ### =)
 Typing in '=)' will replace it with '=) It's kill or be killed after all'
-![image](https://github.com/DestroCore/Seeker-Kill/assets/106755516/0b8effb1-21b4-4a4c-9fb0-8691ad05ab7a)
+![killorbekilled](https://github.com/DestroCore/Seeker-Kill/assets/106755516/39f53c84-c4aa-4ec8-8c31-ef3d62fdbc97)
+
 
 ### Settings Menu
 Pressing 'Shift Escape' key will Take you to the Menu, just like in other games
