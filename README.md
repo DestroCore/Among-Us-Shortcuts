@@ -18,7 +18,7 @@ The Standard Kill. Every 100ms it presses Q.
 Whilst all of these work best on low ping, Seeker Kill practically relies on Low Ping, as it struggles greatly on anything over 150ms
 Activated by pressing **Ctrl F8**.
 
-## **Clicker**
+## **Clicker Kill**
 The Upgraded Kill. Every 50ms presses q, after 50ms presses the Kill Button.
 The supreme kill, as it presses both the hotkey and the actual kill button
 Moves Mouse to Kill Button
@@ -39,6 +39,7 @@ Activated by pressing **Shift T**
 ## **Bonus**
 ### =)
 Typing in '=)' will replace it with '=) It's kill or be killed after all'
+![image](https://github.com/DestroCore/Seeker-Kill/assets/106755516/0b8effb1-21b4-4a4c-9fb0-8691ad05ab7a)
 
 ### Settings Menu
 Pressing 'Shift Escape' key will Take you to the Menu, just like in other games
