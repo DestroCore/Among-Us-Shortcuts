@@ -1,4 +1,4 @@
-msgbox, 4096, Among Us Shortcuts, Have fun with the little treats :D. Refer to github page for shortcuts help, 2
+msgbox, 4096, Among Us Shortcuts, Have fun! Press F1 for Help, 2
 
 toggle = 0
 
@@ -11,6 +11,13 @@ Gui +LastFound
 WinSet, TransColor, 99BBFF
 Gui, Add, Text,, Seeker Kill Active
 Gui SK:Hide
+
+
+; Help
+F1::
+Run https://github.com/DestroCore/Among-Us-Shortcuts/tree/alpha#shortcuts
+return
+
 
 ; Seeker Kill
 ^F8::
