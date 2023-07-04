@@ -53,12 +53,16 @@ By pressing a simple shortcut, you will automatically swipe the card perfectly e
 Once you press the hotkey **don't press any buttons or touch your mouse**
 After it is over, feel free to continue.
 Activated by pressing **Ctrl [**
+![admin swipe](https://github.com/DestroCore/Among-Us-Shortcuts/assets/106755516/52ffae65-0aac-4cd1-86a0-0ffa80ed381c)
+
 
 ## **Public Game**
 Takes you from the Starting Menu (with 'Play, Inventory, Shop etc') to 'Public Game' in the span of 300 milliseconds.
 Delays are a bit longer compared to other commands to take FPS into consideration
 Immediately goes to Public Game List.
 Activated by pressing **Ctrl P**
+![Public Game](https://github.com/DestroCore/Among-Us-Shortcuts/assets/106755516/5c52cbd8-7525-4afd-af26-6ad754fcd376)
+
 
 ## **Sabotages (Skeld)**
 Runs different sabotages (For the Skeld Only)
