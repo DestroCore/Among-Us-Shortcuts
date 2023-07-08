@@ -1,6 +1,8 @@
 # Among Us Shortcuts
 Formerly 'Seeker Kill', useful Keyboard Shortcuts to make the Among Us Experience Better
 
+## RELEASE TRAILER https://youtu.be/VSJL1g5C58E
+
 ### DOWNLOAD THE .EXE, NOT THE .AHK - only download the ahk if you are a developer who wants to modify anything such as hotkeys etc
 
 # SKIP STRAIGHT TO SHORTCUTS: https://github.com/DestroCore/Among-Us-Shortcuts/tree/alpha#shortcuts
