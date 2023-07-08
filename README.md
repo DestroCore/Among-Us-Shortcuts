@@ -35,6 +35,7 @@ The Standard Kill. Every 100ms it presses Q. (Q can be changed in the config fil
 Whilst all of these work best on low ping, Seeker Kill practically relies on Low Ping, as it struggles greatly on anything over 150ms
 Activated by pressing **Ctrl F8**.
 
+
 ## -HS **Clicker Kill**
 The Upgraded Kill. Every 50ms presses q, after 50ms presses the Kill Button. (Q can be changed in the config file)
 The supreme kill, as it presses both the hotkey and the actual kill button
@@ -49,15 +50,24 @@ This works by moving your mouse to the Private / Public button's location and cl
 This can also be used as an auto clicker, but it will only move to that specific location.
 Activated by pressing **F6**
 
+![autopp](https://github.com/DestroCore/Among-Us-Shortcuts/assets/106755516/338ce27d-b814-43bd-b14c-a1c5c39d4477)
+
+
+
 ## **Chat**
 Simple shortcut for activating Chat
 Activated by pressing **Ctrl T**
+
+![chat](https://github.com/DestroCore/Among-Us-Shortcuts/assets/106755516/3173c3aa-449e-4751-ad16-abcddb24a488)
+
+
 
 ## **Admin Swipe**
 By pressing a simple shortcut, you will automatically swipe the card perfectly each time
 Once you press the hotkey **don't press any buttons or touch your mouse**
 After it is over, feel free to continue.
 Activated by pressing **Ctrl Shift A**
+
 ![admin swipe](https://github.com/DestroCore/Among-Us-Shortcuts/assets/106755516/52ffae65-0aac-4cd1-86a0-0ffa80ed381c)
 
 
@@ -66,6 +76,7 @@ Takes you from the Starting Menu (with 'Play, Inventory, Shop etc') to 'Public G
 Delays are a bit longer compared to other commands to take FPS into consideration
 Immediately goes to Public Game List.
 Activated by pressing **Ctrl P**
+
 ![Public Game](https://github.com/DestroCore/Among-Us-Shortcuts/assets/106755516/5c52cbd8-7525-4afd-af26-6ad754fcd376)
 
 
@@ -76,13 +87,21 @@ Runs different sabotages (For the Skeld Only)
 - O2 - Numpad 3 (Numlock needs to be on)
 - Comms - Numpad 4 (Numlock needs to be on)
 
+
 ## **Settings Menu**
 Pressing this will take you to the pause menu / settings menu screen like in other games
 Activated by pressing **Shift Esc**
 
+![menu](https://github.com/DestroCore/Among-Us-Shortcuts/assets/106755516/ccf8ff92-6633-44e5-8101-a0a346bdad8b)
+
+
+
 ## **Leave Game**
 Leaves the game for you under half a second. Works wonders for quick escapes
 Activated by pressing **Ctrl Q**
+
+![leave](https://github.com/DestroCore/Among-Us-Shortcuts/assets/106755516/f02374d9-7b1d-4103-bb6a-5796fb8ad97d)
+
 
 
 ## **Bonus**
@@ -94,9 +113,14 @@ Typing in '=)' will replace it with '=) It's kill or be killed after all'
 # **Config File**
 The Config file is 'config.ini' and looks like this
 
+![image](https://github.com/DestroCore/Among-Us-Shortcuts/assets/106755516/7b1eac2a-31ca-4552-bb26-b9bfbfadd2e9)
+
+
 The config file allows you to change the shortcuts, for example changing Clicker Kill from F8 to Shift O
 The Config File works like this:
-- Find the Correct Section of Your Command (e.g. [GENERAL])
+- Find the Correct Section of Your Command (e.g. [GENERAL]) ![image](https://github.com/DestroCore/Among-Us-Shortcuts/assets/106755516/f771f4c0-a67b-4de6-accf-e36c6b9a2eba)
+
+
 - A table of what each value means lies here:
 
 | Config Name | Feature |
@@ -114,19 +138,30 @@ The Config File works like this:
 | o2c | O2 (Skeld) |
 | commsc | Comms (Skeld) |
 | killc | Kill Button |
+
 **Note: Kill Button (killc) is the Kill Hotkey which you set in Among Us. The Default is 'Q', and stays as Q in both Among Us and in this app unless the user changes it**
 
+![image](https://github.com/DestroCore/Among-Us-Shortcuts/assets/106755516/dc4c5fcd-a5b9-45c4-bf85-dc67d9d7f4b4) ![image](https://github.com/DestroCore/Among-Us-Shortcuts/assets/106755516/6aa449c1-a66f-47c9-b737-6e4eb7ac548c)
+
+
+
 - They will be in the format 'Key=Value'
+  ![image](https://github.com/DestroCore/Among-Us-Shortcuts/assets/106755516/384055d2-b0d9-485a-bd01-64286233f03c)
+
 - Change the 'Value' to whatever you want
+  ![image](https://github.com/DestroCore/Among-Us-Shortcuts/assets/106755516/331935ca-e4e0-4f7f-9ef5-8a4c109ddd77)
+
 | Shortcut | Script Reference |
 | --- | --- |
 | CTRL | ^ |
 | SHIFT | + |
 | ALT | ! |
-| WINDOWS KEY | #|
+| WINDOWS KEY | # |
 (e.g. CTRL F8 = ^F8; SHIFT Y = +Y; CTRL SHIFT T = +^T)
 
 - After changing the values that you need to, save the config.ini file and press **CTRL F5**. If **CTRL F5** does not work, restart the program manually.
+  
+![image](https://github.com/DestroCore/Among-Us-Shortcuts/assets/106755516/5ef81763-2d10-43e2-9754-5cf01b7336e6)
 
 
 
