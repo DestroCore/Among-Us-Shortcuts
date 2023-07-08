@@ -1,0 +1,114 @@
+Shortcuts:
+- Restart Program - CTRL F5 (can't be changed)
+
+- Seeker Kill - CTRL F8
+- Clicker Kill - F8
+
+- Chat - CTRL T
+- Admin Swipe - CTRL SHIFT A
+- Auto Public Private - F6
+- Public Game - CTRL P
+- Menu / Pause Screen - SHIFT ESC
+- Leave Game - CTRL Q
+- =) It's kill or be killed after all - =)
+
+Sabotages (Skeld)
+- Reactor - Numpad 1
+- Lights - Numpad 2
+- O2 - Numpad 3
+- Comms - Numpad 4
+
+
+
+
+Seeker Kill:
+- Presses 'Q' every 100ms. (can be changed in config.ini, 'killc')
+- Relies on Low Ping
+- Best solution if FlashLight mode is on
+- CTRL F8
+
+
+Clicker Kill:
+- Presses 'Q' and clicks Kill Button on Screen every 100ms in total
+- Perfect kill, as it presses button AND hotkey
+- Basically Kill Aura
+- Not Good For Flashlight mode, as you'll be permanently pointing towards the Kill Button
+- F8
+
+
+Auto Public Private (Host)
+- Used by the Host
+- Spams Public/Private button every 1ms
+- Exploits glitch within Among Us, where spamming Public / Private will boost your lobby to the top of the lobbies list, making more people join
+- Can be used as an auto clicker (but you can't choose where it'll click)
+- F6
+
+
+Chat
+- Opens or Closes Chat and moves cursor to chat box
+- CTRL T
+
+
+Admin Swipe
+- Moves card up and swipes it at the perfect speed
+- Speed is selected from about 10 different speed choices, so this one is perfect
+- This specific speed was tested over 10 times on The Skeld, is perfect each time
+- 100% works on Skeld, if it doesn't work it's either lag or ping
+- DON'T TOUCH YOUR MOUSE OR ANY BUTTONS - It will interrupt the process and give you a bad swipe
+- CTRL SHIFT A
+
+
+Public Game
+- Presses Play -> Online -> Public Game
+- Can be used on any of the screens (Play, Online, Public Game) - You can be on the screen with 'Create Game', 'Public Game', 'Join Game', and it will still work
+- Quickly takes you to lobby list
+- CTRL P
+
+
+Menu
+- Clicks Settings Icon to open up Settings
+- Meant to emulate other games
+- SHIFT ESC (Tried making it Esc, but many things in the game already rely on Esc, so it's been changed to Shift Esc)
+
+
+Leave Game
+- Immediately leaves game within the span of 200ms
+- Works quickly and immediately
+- CTRL Q
+
+
+Sabotages (Skeld)
+- Opens map, Selects Chosen Sabotage, Closes Map
+- Only works on Skeld (Suited to Skeld's Map)
+- Reactor - NUMPAD 1
+- Lights - NUMPAD 2
+- O2 - NUMPAD 3
+- Comms - NUMPAD 4
+
+
+=)
+- Replaces '=)' with '=) It's kill or be killed after all'
+- Just a fun little easter egg, and a reference to a little game
+- =)
+
+
+
+Editing The Config File
+- You need to open the 'config.ini' file with a text editor
+	- I'd recommend a program like Notepad or Notepad++. It's something simple
+- For Most Hotkeys go to [GENERAL]. For Sabotages go to [SABOTAGES]. For the Kill Button go to [KILLBUTTON]
+
+- Find the corresponding setting name (Full Names are at the bottom of the file)
+- You'll see something like this:
+	Skill=Shortcut
+- Change whatever 'Shortcut' is to what you want it to be
+- For specific things such as CTRL, or SHIFT, see below:
+	- CTRL = ^ (e.g. CTRL A = ^a)
+	- SHIFT = + (e.g. SHIFT A = +a)
+	- ALT = ! (e.g. ALT A = !a)
+	- WINDOWS KEY = # (e.g. WindowsKey A = #a)
+
+- You can combine these as well
+	- CTRL SHIFT = +^ (e.g. CTRL SHIFT A = +^a)
+
+- After editing the config file, you must restart the program through CTRL F5
