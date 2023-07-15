@@ -1,10 +1,23 @@
+#SingleInstance Force
+
 #IfWinActive
-RanTitle = % Random_Choice("Among Us Shortcuts", "Yooo How are ya", "Heya", "The Cake is a Lie", "Destro Core!", "This is a Message", "e=mc^2", "Among Us", "Amogus", "I'm having way too much fun with these titles", "Appreciate my code", "Among Us Shortcuts!", "Among Us Shortcuts!!", "Among Us Shortcuts!!!", "Amogus 2: Electric Boogaloo", "When the Pretender is Skeptical", "When the imposter is suspicious", "Among Us Shortcuts?", "Among Us Shortcuts?!", "Shortcuts Among Us", "Shortcuts for Among Us", "Seeker Kill", "Have you realized that this title changes every time you start this up?", "Minceraft", "Removed Herobrine", "Shortcuts Among Us!!!! ", "Seeker Kill v2", "help", "Among Us Shortcuts", "This is an Easter Egg", "VS Impostor V4", "Never Gonna Give You Up", "I said right foot creep", "I will not let you destroy my world", "Hakai", "Kakarot", "Settings for Among Us", "Among Us Utilities", "The Powder Toy", "Stick Ranger - Dan Ball", "The Powder Game", "Super Smash Flash 2", "What's the point of us being here? Are we here just for the amusement of someone else? Are we just here to be tested as a simulation, as something for people to simply laugh about? I don't understand this anymore.", "☝︎✌︎💧︎❄︎☜︎☼︎","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Sup")
+RanTitle = % Random_Choice("Among Us Shortcuts", "Yooo How are ya", "Heya", "The Cake is a Lie", "Destro Core!", "This is a Message", "e=mc^2", "Among Us", "Amogus", "I'm having way too much fun with these titles", "Appreciate my code", "Among Us Shortcuts!", "Among Us Shortcuts!!", "Among Us Shortcuts!!!", "Amogus 2: Electric BoogalooA", "When the Pretender is Skeptical", "When the imposter is suspicious", "Among Us Shortcuts?", "Among Us Shortcuts?!", "Shortcuts Among Us", "Shortcuts for Among Us", "Seeker Kill", "Have you realized that this title changes every time you start this up?", "Minceraft", "Removed Herobrine", "Shortcuts Among Us!!!! ", "Seeker Kill v2", "help", "Among Us Shortcuts", "This is an Easter Egg", "VS Impostor V4", "Never Gonna Give You Up", "I said right foot creep", "I will not let you destroy my world", "Hakai", "Kakarot", "Settings for Among Us", "Among Us Utilities", "The Powder Toy", "Stick Ranger - Dan Ball", "The Powder Game", "Super Smash Flash 2", "What's the point of us being here? Are we here just for the amusement of someone else? Are we just here to be tested as a simulation, as something for people to simply laugh about? I don't understand this anymore.", "☝︎✌︎💧︎❄︎☜︎☼︎","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Sup")
 
 Random_Choice(Choices*){
     Random,Index,1,% Choices.MaxIndex()
     Return,Choices[Index]
 }
+
+
+if FileExist("config.ini")
+    a = 1
+else
+    UrlDownloadToFile, https://raw.githubusercontent.com/DestroCore/Among-Us-Shortcuts/main/config.ini,%A_WorkingDir%\config.ini
+
+
+if FileExist("tempAUS.exe")
+    FileDelete, tempAUS.exe
+
 
 
 msgbox, 4096, %RanTitle%, Have fun! Press Ctrl F1 for Help and CTRL F2 for the config. F7 is Pause, 3
@@ -25,19 +38,21 @@ WinSet, TransColor, 99BBFF
 Gui, Add, Text,, Seeker Kill Active
 Gui SK:Hide
 
-IniRead, sskey, config.ini, GENERAL, skc, Error
-IniRead, cckey, config.ini, GENERAL, ckc, Error
-IniRead, ckey, config.ini, GENERAL, cc, Error
-IniRead, askey, config.ini, GENERAL, asc, Error
-IniRead, appkey, config.ini, GENERAL, appc, Error
-IniRead, pgkey, config.ini, GENERAL, pgc, Error
-IniRead, mckey, config.ini, GENERAL, mc, Error
-IniRead, lckey, config.ini, GENERAL, lc, Error
-IniRead, reactorkey, config.ini, SABOTAGES, reactorc, Error
-IniRead, lightskey, config.ini, SABOTAGES, lightsc, Error
-IniRead, o2key, config.ini, SABOTAGES, o2c, Error
-IniRead, commskey, config.ini, SABOTAGES, commsc, Error
-IniRead, killkey, config.ini, KILLBUTTON, killc, Error
+
+
+IniRead, sskey, config.ini, GENERAL, skc, ^f8
+IniRead, cckey, config.ini, GENERAL, ckc, f8
+IniRead, ckey, config.ini, GENERAL, cc, ^t
+IniRead, askey, config.ini, GENERAL, asc, +^a
+IniRead, appkey, config.ini, GENERAL, appc, f6
+IniRead, pgkey, config.ini, GENERAL, pgc, ^p
+IniRead, mckey, config.ini, GENERAL, mc, +esc
+IniRead, lckey, config.ini, GENERAL, lc, ^q
+IniRead, reactorkey, config.ini, SABOTAGES, reactorc, numpad1
+IniRead, lightskey, config.ini, SABOTAGES, lightsc, numpad2
+IniRead, o2key, config.ini, SABOTAGES, o2c, numpad3
+IniRead, commskey, config.ini, SABOTAGES, commsc, numpad4
+IniRead, killkey, config.ini, KILLBUTTON, killc, q
 
 Hotkey,%sskey%,SeekerKill
 Hotkey,%cckey%,ClickerKill
@@ -51,7 +66,36 @@ Hotkey,%reactorkey%,ReactorSkeld
 Hotkey,%lightskey%,LightsSkeld
 Hotkey,%o2key%,O2Skeld
 Hotkey,%commskey%,CommsSkeld
+
+currentVer = 1.1.0
+
+PageRequest := ComObjCreate("WinHttp.WinHttpRequest.5.1")
+PageRequest.Open("GET", "https://raw.githubusercontent.com/DestroCore/Among-Us-Shortcuts/Version-Checker/latest.txt", true)
+PageRequest.Send()
+PageRequest.WaitForResponse()
+latestVer := PageRequest.ResponseText
+
+; MsgBox,,Latest, %latestVer%
+; MsgBox,,Current, %currentVer%
+CurrentAUS = %A_ScriptName%
+
+
+if (latestVer != currentVer) {
+    MsgBox, 4, NEW UPDATE AVAILABLE!!,Your version %currentVer% is outdated. The latest version is %latestVer% Do you want to install the latest version? (Ignore if both versions are the same)
+    IfMsgBox, No, return
+    IfMsgBox, Yes
+        MsgBox,,Little Thing...,The Program will restart after downloading. If you see a message talking about 'instances', just press Ok.
+        UrlDownloadToFile,https://github.com/DestroCore/Among-Us-Shortcuts/releases/latest/download/Among.Us.Shortcuts.exe,%A_WorkingDir%\AUS.exe
+        FileMove, %CurrentAUS%, tempAUS.exe
+        FileMove, AUS.exe, Among Us Shortcuts.exe
+        Run Among Us Shortcuts.exe
+        ExitApp
+}
+
 return
+
+
+
 
 
 
