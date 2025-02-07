@@ -67,7 +67,7 @@ Hotkey,%lightskey%,LightsSkeld
 Hotkey,%o2key%,O2Skeld
 Hotkey,%commskey%,CommsSkeld
 
-currentVer = 1.1.0
+currentVer = 1.3.0
 
 PageRequest := ComObjCreate("WinHttp.WinHttpRequest.5.1")
 PageRequest.Open("GET", "https://raw.githubusercontent.com/DestroCore/Among-Us-Shortcuts/Version-Checker/latest.txt", true)
