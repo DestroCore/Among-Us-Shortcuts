@@ -1,7 +1,7 @@
 #SingleInstance Force
 
 #IfWinActive
-RanTitle = % Random_Choice("Among Us Shortcuts", "Yooo How are ya", "Heya", "The Cake is a Lie", "Destro Core!", "This is a Message", "e=mc^2", "Among Us", "Amogus", "I'm having way too much fun with these titles", "Appreciate my code", "Among Us Shortcuts!", "Among Us Shortcuts!!", "Among Us Shortcuts!!!", "Amogus 2: Electric BoogalooA", "When the Pretender is Skeptical", "When the imposter is suspicious", "Among Us Shortcuts?", "Among Us Shortcuts?!", "Shortcuts Among Us", "Shortcuts for Among Us", "Seeker Kill", "Have you realized that this title changes every time you start this up?", "Minceraft", "Removed Herobrine", "Shortcuts Among Us!!!! ", "Seeker Kill v2", "help", "Among Us Shortcuts", "This is an Easter Egg", "VS Impostor V4", "Never Gonna Give You Up", "I said right foot creep", "I will not let you destroy my world", "Hakai", "Kakarot", "Settings for Among Us", "Among Us Utilities", "The Powder Toy", "Stick Ranger - Dan Ball", "The Powder Game", "Super Smash Flash 2", "What's the point of us being here? Are we here just for the amusement of someone else? Are we just here to be tested as a simulation, as something for people to simply laugh about? I don't understand this anymore.", "☝︎✌︎💧︎❄︎☜︎☼︎","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Sup")
+RanTitle = % Random_Choice("Among Us Shortcuts", "Yooo How are ya", "Heya", "The Cake is a Lie", "Destro Core!", "Among Us Shortcuts", "This is a Message", "e=mc^2", "Among Us", "Amogus", "I'm having way too much fun with these titles", "Appreciate my code", "Among Us Shortcuts!", "Among Us Shortcuts!!", "Among Us Shortcuts!!!", "Amogus 2: Electric BoogalooA", "When the Pretender is Skeptical", "Among Us Shortcuts", "When the imposter is suspicious", "Among Us Shortcuts?", "Among Us Shortcuts?!", "Shortcuts Among Us", "Shortcuts for Among Us", "Seeker Kill", "Among Us Shortcuts", "Have you realized that this title changes every time you start this up?", "Minceraft", "Removed Herobrine", "Shortcuts Among Us!!!! ", "Seeker Kill v2", "help", "Among Us Shortcuts", "This is an Easter Egg", "VS Impostor V4", "Never Gonna Give You Up", "I said right foot creep", "I will not let you destroy my world", "Hakai", "Kakarot", "Settings for Among Us", "Among Us Utilities", "The Powder Toy", "Stick Ranger - Dan Ball", "The Powder Game", "Super Smash Flash 2", "What's the point of us being here? Are we here just for the amusement of someone else? Are we just here to be tested as a simulation, as something for people to simply laugh about? I don't understand this anymore.", "☝︎✌︎💧︎❄︎☜︎☼︎","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Sup","I put my new forgis on the jeep","I think I'm in love wth","I used to think that I wasn't fine enough...","Imada Genkai Toppa!","Among Us Shortcuts","Among-Us-Shortcuts","Bring it On >:D","Subscribe to DestroCore","Among Us Shortcuts","SSJ Shallot","Sidemen Among Us","Among Us Shortcuts","TOHE","Do people even read this?","Among Us Shortcuts","Apple Bottom Jeans","I think I have a crush","You just make me wanna cry...","Ugh!","GOGETA","BROLY","GO BROLY COME ON BROLY","GO BROLY GO GO","lul","¯\_(ツ)_/¯","(눈_눈)","ಠ_ಠ","┐⁠(⁠‘⁠～⁠`⁠;⁠)⁠┌","We love Hypixel","Among Us Shortcuts","hehehe","Minecraft","Terraria","Splash Text","Insert Text Here","Ho Ho Ho! Hello, Monkeys!","Worldbox","Universe Sandbox","Lunar Client","Among Us","Among Us without the Shortcuts","Dragon Ball Super","GXSCC","MultiMC","Dragon Ball FighterZ", "Dragon Ball: Sparking Zero", "Dragon Ball: Sparking Meteor", "Dragon Ball: Sparking Neo", "Tor Browser", "=)", "Depresso Espresso", "MOOC", "Dragon Ball Legends", "Dragon Ball Daima")
 
 Random_Choice(Choices*){
     Random,Index,1,% Choices.MaxIndex()
@@ -67,7 +67,7 @@ Hotkey,%lightskey%,LightsSkeld
 Hotkey,%o2key%,O2Skeld
 Hotkey,%commskey%,CommsSkeld
 
-currentVer = 1.3.0
+currentVer = 1.4.0
 
 PageRequest := ComObjCreate("WinHttp.WinHttpRequest.5.1")
 PageRequest.Open("GET", "https://raw.githubusercontent.com/DestroCore/Among-Us-Shortcuts/Version-Checker/latest.txt", true)
@@ -200,7 +200,7 @@ AutoPublicPrivate:
 
     While AutoClick
     {
-        MouseClick, left, 689, 985,,0
+        MouseClick, left, 1773, 625,,0
     }
 return
 
@@ -218,7 +218,7 @@ return
     ; Settings Menu
     SettingsMenu() {
          if (WinActive("ahk_exe Among Us.exe")) {
-            MouseClick, left, 1849, 61,,0
+            MouseClick, left, 1688, 73,,0
         }
     }
     return
@@ -227,7 +227,7 @@ return
     ; Leave Game
     Leave() {
         if (WinActive("ahk_exe Among Us.exe")) {
-            MouseClick, left, 1849, 61,,0
+            MouseClick, left, 1688, 73,,0
             Sleep, 100
             MouseClick, left, 957, 874,,0
         }
@@ -238,9 +238,9 @@ return
     ;Chat
     Chat() {
         ; if (WinActive("ahk_exe Among Us.exe")) {
-            MouseClick, left, 1520, 142,,0
-            Sleep 10
-            MouseClick, left, 1713, 48,,0
+            MouseClick, left, 1562, 123,,0
+            ;Sleep 10
+            ;MouseClick, left, 1713, 48,,0
             Sleep 100
             MouseClick, left, 641, 864,,0
         ; }
@@ -310,8 +310,9 @@ return
         MouseClick, left, 368, 391,,0
         Sleep 100
         MouseClick, left, 1544, 640,,0
-        Sleep 200
-        MouseClick, left, 965, 612,,0
+        Sleep 10
+        MouseClick, left, 1544, 640,,0
+        ;MouseClick, left, 965, 612,,0
     }
     return
 ;}
@@ -359,4 +360,4 @@ Send, {ctrl down}s{ctrl up}
 sleep, 100
 reload
 return
-#IfWinActive
+#IfWinActive 
