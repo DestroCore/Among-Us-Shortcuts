@@ -1,10 +1,23 @@
+#SingleInstance Force
+
 #IfWinActive
-RanTitle = % Random_Choice("Among Us Shortcuts", "Yooo How are ya", "Heya", "The Cake is a Lie", "Destro Core!", "This is a Message", "e=mc^2", "Among Us", "Amogus", "I'm having way too much fun with these titles", "Appreciate my code", "Among Us Shortcuts!", "Among Us Shortcuts!!", "Among Us Shortcuts!!!", "Amogus 2: Electric Boogaloo", "When the Pretender is Skeptical", "When the imposter is suspicious", "Among Us Shortcuts?", "Among Us Shortcuts?!", "Shortcuts Among Us", "Shortcuts for Among Us", "Seeker Kill", "Have you realized that this title changes every time you start this up?", "Minceraft", "Removed Herobrine", "Shortcuts Among Us!!!! ", "Seeker Kill v2", "help", "Among Us Shortcuts", "This is an Easter Egg", "VS Impostor V4", "Never Gonna Give You Up", "I said right foot creep", "I will not let you destroy my world", "Hakai", "Kakarot", "Settings for Among Us", "Among Us Utilities", "The Powder Toy", "Stick Ranger - Dan Ball", "The Powder Game", "Super Smash Flash 2", "What's the point of us being here? Are we here just for the amusement of someone else? Are we just here to be tested as a simulation, as something for people to simply laugh about? I don't understand this anymore.", "☝︎✌︎💧︎❄︎☜︎☼︎","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Sup")
+RanTitle = % Random_Choice("Among Us Shortcuts", "Yooo How are ya", "Heya", "The Cake is a Lie", "Destro Core!", "Among Us Shortcuts", "This is a Message", "e=mc^2", "Among Us", "Amogus", "I'm having way too much fun with these titles", "Appreciate my code", "Among Us Shortcuts!", "Among Us Shortcuts!!", "Among Us Shortcuts!!!", "Amogus 2: Electric BoogalooA", "When the Pretender is Skeptical", "Among Us Shortcuts", "When the imposter is suspicious", "Among Us Shortcuts?", "Among Us Shortcuts?!", "Shortcuts Among Us", "Shortcuts for Among Us", "Seeker Kill", "Among Us Shortcuts", "Have you realized that this title changes every time you start this up?", "Minceraft", "Removed Herobrine", "Shortcuts Among Us!!!! ", "Seeker Kill v2", "help", "Among Us Shortcuts", "This is an Easter Egg", "VS Impostor V4", "Never Gonna Give You Up", "I said right foot creep", "I will not let you destroy my world", "Hakai", "Kakarot", "Settings for Among Us", "Among Us Utilities", "The Powder Toy", "Stick Ranger - Dan Ball", "The Powder Game", "Super Smash Flash 2", "What's the point of us being here? Are we here just for the amusement of someone else? Are we just here to be tested as a simulation, as something for people to simply laugh about? I don't understand this anymore.", "☝︎✌︎💧︎❄︎☜︎☼︎","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Among Us Shortcuts","Sup","I put my new forgis on the jeep","I think I'm in love wth","I used to think that I wasn't fine enough...","Imada Genkai Toppa!","Among Us Shortcuts","Among-Us-Shortcuts","Bring it On >:D","Subscribe to DestroCore","Among Us Shortcuts","SSJ Shallot","Sidemen Among Us","Among Us Shortcuts","TOHE","Do people even read this?","Among Us Shortcuts","Apple Bottom Jeans","I think I have a crush","You just make me wanna cry...","Ugh!","GOGETA","BROLY","GO BROLY COME ON BROLY","GO BROLY GO GO","lul","¯\_(ツ)_/¯","(눈_눈)","ಠ_ಠ","┐⁠(⁠‘⁠～⁠`⁠;⁠)⁠┌","We love Hypixel","Among Us Shortcuts","hehehe","Minecraft","Terraria","Splash Text","Insert Text Here","Ho Ho Ho! Hello, Monkeys!","Worldbox","Universe Sandbox","Lunar Client","Among Us","Among Us without the Shortcuts","Dragon Ball Super","GXSCC","MultiMC","Dragon Ball FighterZ", "Dragon Ball: Sparking Zero", "Dragon Ball: Sparking Meteor", "Dragon Ball: Sparking Neo", "Tor Browser", "=)", "Depresso Espresso", "MOOC", "Dragon Ball Legends", "Dragon Ball Daima")
 
 Random_Choice(Choices*){
     Random,Index,1,% Choices.MaxIndex()
     Return,Choices[Index]
 }
+
+
+if FileExist("config.ini")
+    a = 1
+else
+    UrlDownloadToFile, https://raw.githubusercontent.com/DestroCore/Among-Us-Shortcuts/main/config.ini,%A_WorkingDir%\config.ini
+
+
+if FileExist("tempAUS.exe")
+    FileDelete, tempAUS.exe
+
 
 
 msgbox, 4096, %RanTitle%, Have fun! Press Ctrl F1 for Help and CTRL F2 for the config. F7 is Pause, 3
@@ -25,19 +38,22 @@ WinSet, TransColor, 99BBFF
 Gui, Add, Text,, Seeker Kill Active
 Gui SK:Hide
 
-IniRead, sskey, config.ini, GENERAL, skc, Error
-IniRead, cckey, config.ini, GENERAL, ckc, Error
-IniRead, ckey, config.ini, GENERAL, cc, Error
-IniRead, askey, config.ini, GENERAL, asc, Error
-IniRead, appkey, config.ini, GENERAL, appc, Error
-IniRead, pgkey, config.ini, GENERAL, pgc, Error
-IniRead, mckey, config.ini, GENERAL, mc, Error
-IniRead, lckey, config.ini, GENERAL, lc, Error
-IniRead, reactorkey, config.ini, SABOTAGES, reactorc, Error
-IniRead, lightskey, config.ini, SABOTAGES, lightsc, Error
-IniRead, o2key, config.ini, SABOTAGES, o2c, Error
-IniRead, commskey, config.ini, SABOTAGES, commsc, Error
-IniRead, killkey, config.ini, KILLBUTTON, killc, Error
+
+
+IniRead, sskey, config.ini, GENERAL, skc, ^f8
+IniRead, cckey, config.ini, GENERAL, ckc, f8
+IniRead, ckey, config.ini, GENERAL, cc, ^t
+IniRead, askey, config.ini, GENERAL, asc, +^a
+IniRead, appkey, config.ini, GENERAL, appc, f6
+IniRead, pgkey, config.ini, GENERAL, pgc, ^p
+IniRead, mckey, config.ini, GENERAL, mc, +esc
+IniRead, lckey, config.ini, GENERAL, lc, ^q
+IniRead, lcskey, config.ini, GENERAL, lsc, ^l
+IniRead, reactorkey, config.ini, SABOTAGES, reactorc, numpad1
+IniRead, lightskey, config.ini, SABOTAGES, lightsc, numpad2
+IniRead, o2key, config.ini, SABOTAGES, o2c, numpad3
+IniRead, commskey, config.ini, SABOTAGES, commsc, numpad4
+IniRead, killkey, config.ini, KILLBUTTON, killc, q
 
 Hotkey,%sskey%,SeekerKill
 Hotkey,%cckey%,ClickerKill
@@ -46,12 +62,42 @@ Hotkey,%askey%,AdminSwipe
 Hotkey,%appkey%,AutoPublicPrivate
 Hotkey,%pgkey%,PublicGame
 Hotkey,%mckey%,SettingsMenu
+Hotkey,%lcskey%,LobbySettings
 Hotkey,%lckey%,Leave
 Hotkey,%reactorkey%,ReactorSkeld
 Hotkey,%lightskey%,LightsSkeld
 Hotkey,%o2key%,O2Skeld
 Hotkey,%commskey%,CommsSkeld
+
+currentVer = 1.5.0
+
+PageRequest := ComObjCreate("WinHttp.WinHttpRequest.5.1")
+PageRequest.Open("GET", "https://raw.githubusercontent.com/DestroCore/Among-Us-Shortcuts/Version-Checker/latest.txt", true)
+PageRequest.Send()
+PageRequest.WaitForResponse()
+latestVer := PageRequest.ResponseText
+
+; MsgBox,,Latest, %latestVer%
+; MsgBox,,Current, %currentVer%
+CurrentAUS = %A_ScriptName%
+
+
+if (latestVer != currentVer) {
+    MsgBox, 4, NEW UPDATE AVAILABLE!!,Your version %currentVer% is outdated. The latest version is %latestVer% Do you want to install the latest version? (Ignore if both versions are the same)
+    IfMsgBox, No, return
+    IfMsgBox, Yes
+        MsgBox,,Little Thing...,The Program will restart after downloading. If you see a message talking about 'instances', just press Ok.
+        UrlDownloadToFile,https://github.com/DestroCore/Among-Us-Shortcuts/releases/latest/download/Among.Us.Shortcuts.exe,%A_WorkingDir%\AUS.exe
+        FileMove, %CurrentAUS%, tempAUS.exe
+        FileMove, AUS.exe, Among Us Shortcuts.exe
+        Run Among Us Shortcuts.exe
+        ExitApp
+}
+
 return
+
+
+
 
 
 
@@ -156,10 +202,14 @@ AutoPublicPrivate:
 
     While AutoClick
     {
-        MouseClick, left, 689, 985,,0
+        MouseClick, left, 1773, 625,,0
     }
 return
 
+;Lobby Settings
+LobbySettings:
+    MouseClick, left, 1765, 747,,0
+return
 
 
 ;Bonus
@@ -174,7 +224,7 @@ return
     ; Settings Menu
     SettingsMenu() {
          if (WinActive("ahk_exe Among Us.exe")) {
-            MouseClick, left, 1849, 61,,0
+            MouseClick, left, 1688, 73,,0
         }
     }
     return
@@ -183,7 +233,7 @@ return
     ; Leave Game
     Leave() {
         if (WinActive("ahk_exe Among Us.exe")) {
-            MouseClick, left, 1849, 61,,0
+            MouseClick, left, 1688, 73,,0
             Sleep, 100
             MouseClick, left, 957, 874,,0
         }
@@ -193,13 +243,13 @@ return
 
     ;Chat
     Chat() {
-        ; if (WinActive("ahk_exe Among Us.exe")) {
-            MouseClick, left, 1520, 142,,0
-            Sleep 10
-            MouseClick, left, 1713, 48,,0
+        if (WinActive("ahk_exe Among Us.exe")) {
+            MouseClick, left, 1562, 123,,0
+            ;Sleep 10
+            ;MouseClick, left, 1713, 48,,0
             Sleep 100
             MouseClick, left, 641, 864,,0
-        ; }
+        }
     }
     return
 
@@ -266,8 +316,9 @@ return
         MouseClick, left, 368, 391,,0
         Sleep 100
         MouseClick, left, 1544, 640,,0
-        Sleep 200
-        MouseClick, left, 965, 612,,0
+        Sleep 10
+        MouseClick, left, 1544, 640,,0
+        ;MouseClick, left, 965, 612,,0
     }
     return
 ;}
@@ -315,4 +366,4 @@ Send, {ctrl down}s{ctrl up}
 sleep, 100
 reload
 return
-#IfWinActive
+#IfWinActive 
