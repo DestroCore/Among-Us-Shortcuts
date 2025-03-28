@@ -48,6 +48,7 @@ IniRead, appkey, config.ini, GENERAL, appc, f6
 IniRead, pgkey, config.ini, GENERAL, pgc, ^p
 IniRead, mckey, config.ini, GENERAL, mc, +esc
 IniRead, lckey, config.ini, GENERAL, lc, ^q
+IniRead, lcskey, config.ini, GENERAL, lsc, ^l
 IniRead, reactorkey, config.ini, SABOTAGES, reactorc, numpad1
 IniRead, lightskey, config.ini, SABOTAGES, lightsc, numpad2
 IniRead, o2key, config.ini, SABOTAGES, o2c, numpad3
@@ -61,13 +62,14 @@ Hotkey,%askey%,AdminSwipe
 Hotkey,%appkey%,AutoPublicPrivate
 Hotkey,%pgkey%,PublicGame
 Hotkey,%mckey%,SettingsMenu
+Hotkey,%lcskey%,LobbySettings
 Hotkey,%lckey%,Leave
 Hotkey,%reactorkey%,ReactorSkeld
 Hotkey,%lightskey%,LightsSkeld
 Hotkey,%o2key%,O2Skeld
 Hotkey,%commskey%,CommsSkeld
 
-currentVer = 1.4.0
+currentVer = 1.5.0
 
 PageRequest := ComObjCreate("WinHttp.WinHttpRequest.5.1")
 PageRequest.Open("GET", "https://raw.githubusercontent.com/DestroCore/Among-Us-Shortcuts/Version-Checker/latest.txt", true)
@@ -204,6 +206,10 @@ AutoPublicPrivate:
     }
 return
 
+;Lobby Settings
+LobbySettings:
+    MouseClick, left, 1765, 747,,0
+return
 
 
 ;Bonus
@@ -237,13 +243,13 @@ return
 
     ;Chat
     Chat() {
-        ; if (WinActive("ahk_exe Among Us.exe")) {
+        if (WinActive("ahk_exe Among Us.exe")) {
             MouseClick, left, 1562, 123,,0
             ;Sleep 10
             ;MouseClick, left, 1713, 48,,0
             Sleep 100
             MouseClick, left, 641, 864,,0
-        ; }
+        }
     }
     return
 
