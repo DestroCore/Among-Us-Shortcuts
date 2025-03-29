@@ -1,5 +1,9 @@
 # Among Us Shortcuts
-Formerly 'Seeker Kill', useful Keyboard Shortcuts to make the Among Us Experience Better
+Formerly 'Seeker Kill', useful Keyboard Shortcuts to make the Among Us Experience Better. Pretty much just a bunch of macros. :P
+
+**NOTE** The Images may be outdated, but the actual script has been updated. 
+
+**NOTE** ALSO - The Source ZIP is ALWAYS Updated before the RELEASES Section. If you want the updated version, make sure to download and extract the ZIP.
 
 ## RELEASE TRAILER https://youtu.be/VSJL1g5C58E
 
@@ -47,6 +51,8 @@ Activated by pressing **F8**
 *Note:* If Flashlight Mode is on, Clicker Kill will restrict the flashlight to the bottom right of the screen, so the user will not be able to move the flashlight
 
 ## **Auto Public Private (Host)**
+**NOTE**: Not sure if this glitch works anymore. If it doesn't, just use this as an auto-clicker or something.
+
 Utilising Among Us glitch for getting many people in lobby - by spamming the public / private button, it pushes your lobby to the top of the lobby list, making more people join
 This works by moving your mouse to the Private / Public button's location and clicking every 1ms.
 This can also be used as an auto clicker, but it will only move to that specific location.
@@ -189,10 +195,14 @@ The Config File works like this:
 | Numpad 3 | O2 |
 | Numpad 4 | Comms |
 
+# Credit
+- Icon - IsItLucas
+
 # To Do
-- [ ] Add Images / Evidence to GitHub
+- [X] Add Images / Evidence to GitHub
 
 - [x] Add config files for users
-- [ ] Add Auto Update
+- [X] Add Auto Update
 - [ ] More features and custom autofills
 - [ ] Add sabotages from all maps 1/4
+- [ ] Work for Other Screen Resolutions
